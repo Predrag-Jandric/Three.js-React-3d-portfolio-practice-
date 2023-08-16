@@ -36,7 +36,7 @@
 //     border: $border;
 // }
 
-@mixin width-height($width, $height) {
+@mixin wh($width, $height) {
     width: $width;
     height: $height;
 }

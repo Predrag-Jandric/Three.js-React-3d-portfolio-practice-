@@ -1,16 +1,27 @@
-import React from 'react'
+import Map from './Map'
+import React from 'react';
 
 function Contact() {
   return (
-    <main className='contact-container component-container'>
+    <main className='section'>
+      <section className='container'>
 
-      <form className='contact__form' action="">
-      <h3 className='contact__form__h3'>Contact</h3>
-      <input className='contact__form__input1' type="text" placeholder='Name' />
-      <input className='contact__form__input2' type="email" placeholder='Email' />
-      <textarea className='contact__form__textarea' name="" placeholder='Write your message' rows="10"></textarea>
-      </form>
+        <div className="left">
+          <form  className='form'>
+            <h3 className='form__h3'>Contact</h3>
+            <input className='form__input1' placeholder="Name" />
+            <input className='form__input2' placeholder="Email" />
+            <textarea className='form__textarea' placeholder="Write your message"
+             rows="10"></textarea>
+            <button onClick={() => alert('FORM IS NOT OPERATIONAL')} className='form__btn' type="submit">Send</button>
+          </form>
+        </div>
 
+        <div className="right">
+          <Map />
+        </div>
+
+      </section>
     </main>
   )
 }
