@@ -1,0 +1,25 @@
+@use '../modules/globals' as *;
+@use '../modules/mixins' as *;
+@use '../modules/variables' as *;
+
+.nav {
+    @include flex(space-between, center);
+    width: 80vw;
+    background-color: pink;
+    height: 7vh;
+
+    &__img {
+    
+    }
+
+    &__ul {
+        @include flex(center, center, 1rem);
+        background-color: red;
+        display: flex;
+
+        &__li {
+            list-style: none; 
+            background-color: yellow;
+        }
+    }
+}

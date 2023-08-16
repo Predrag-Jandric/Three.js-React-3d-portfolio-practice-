@@ -2,9 +2,9 @@ import React from 'react'
 
 function Works() {
   return (
-    <div>
+    <main className='works-container component-container'>
       <p>Works</p>
-    </div>
+    </main>
   )
 }
 

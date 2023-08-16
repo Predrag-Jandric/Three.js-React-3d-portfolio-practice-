@@ -2,9 +2,9 @@ import React from 'react'
 
 function Who() {
   return (
-    <div>
+    <main className='who-container component-container'>
       <p >Who</p>
-    </div>
+    </main>
   )
 }
 

@@ -4,9 +4,10 @@ import Hero from './components/Hero';
 import Who from './components/Who';
 import Works from './components/Works';
 
+
 function App() {
   return (
-    <main className="main-container">
+    <main className="main-container ">
       <Hero/>
       <Who/>
       <Works/>
