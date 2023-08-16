@@ -2,6 +2,27 @@
 @use '../modules/mixins' as *;
 @use '../modules/variables' as *;
 
-.contact {
-    background-color: red;
+.contact-container {
+    @include flex(center, center);
+}
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+
+    &__h3{
+
+    }
+
+    &__input1{
+
+    }
+
+    &__input2{
+
+    }
+
+    &__textarea{
+
+    }
 }

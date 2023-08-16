@@ -8,9 +8,9 @@
     background-color: pink;
     height: 7vh;
 
-    &__img {
+    // &__img {
     
-    }
+    // }
 
     &__ul {
         @include flex(center, center, 1rem);

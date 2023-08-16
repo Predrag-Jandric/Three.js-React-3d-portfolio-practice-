@@ -1,3 +1,36 @@
 @use '../modules/globals' as *;
 @use '../modules/mixins' as *;
 @use '../modules/variables' as *;
+
+
+.who-container {
+    @include flex(center, center);
+}
+
+.who{
+    @include flex(center, center);
+    width: 80vw;
+
+    &__left{
+        width: 20rem;
+
+        animation: animate 2s infinite ease-in-out alternate;
+        
+
+        @keyframes animate{
+            to{
+                transform: translateY(20px);
+            }
+        }
+    }
+
+
+    &__right{
+
+        @include flex(flex-start, flex-start, 1rem, column);
+
+        &__h1{
+            font-size: 2rem;
+        }
+    }
+}
