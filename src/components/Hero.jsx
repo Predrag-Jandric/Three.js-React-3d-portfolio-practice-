@@ -37,6 +37,7 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background-color: gray;
 
   @media only screen and (max-width: 768px) {
     height: 200vh;
@@ -106,7 +107,7 @@ const Button = styled.button`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
-  width: 100px;
+  width: 10rem;
   padding: 10px;
   border: none;
   border-radius: 5px;

@@ -13,7 +13,7 @@ function Works() {
           <h2 className='works__left__h2'>Product Design</h2>
           <h2 className='works__left__h2'>Social Media</h2>
         </article>
-        
+      
 
         <img className='works__right' src={heroimg} alt="" />
       </section>
@@ -23,3 +23,6 @@ function Works() {
 }
 
 export default Works
+
+
+

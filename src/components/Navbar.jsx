@@ -1,24 +1,7 @@
-// import React from 'react'
-// import logo from '../assets/logo.png'
-
-// function Navbar() {
-//   return (
-//     <main className='nav'>
-//       <img className='nav__img' src={logo} alt="logo" />
-
-//       <ul className='nav__ul'>
-//         <li className='nav__ul__li'>link 1</li>
-//         <li className='nav__ul__li'>link 2</li>
-//         <li className='nav__ul__li'>link 3</li>
-//       </ul>
-//     </main>
-//   )
-// }
-
-// export default Navbar
-
 import React from "react";
 import styled from "styled-components";
+import search from "../assets/search.svg";
+import logo from "../assets/logoipsum.svg";
 
 const Section = styled.div`
   display: flex;
@@ -78,8 +61,7 @@ const Icon = styled.img`
 `;
 
 const Button = styled.button`
-  width: 100px;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: #da4ea2;
   color: white;
   border: none;
@@ -92,7 +74,7 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/logo.png" />
+          <Logo src={logo} />
           <List>
             <ListItem>Home</ListItem>
             <ListItem>Studio</ListItem>
@@ -102,7 +84,7 @@ const Navbar = () => {
         </Links>
         <Icons>
           {/* Changed the image due to copyright problems */}
-          <Icon src="./img/search.png" />
+          <Icon src={search} />
           <Button>Hire Now</Button>
         </Icons>
       </Container>

@@ -1,9 +1,13 @@
-import React from 'react'
-import { PerspectiveCamera, RenderTexture, Text } from '@react-three/drei'
+import React, { useRef } from "react";
+import { PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
-function Cube() {
-
-
+const Cube = () => {
+    const textRef = useRef();
+    useFrame(
+        (state) =>
+            (textRef.current.position.x = Math.sin(state.clock.elapsedTime) / 2)
+    );
     return (
         <mesh>
             <boxGeometry />
@@ -11,13 +15,13 @@ function Cube() {
                 <RenderTexture attach="map">
                     <PerspectiveCamera makeDefault position={[0, 0, 5]} />
                     <color attach="background" args={["#dc9dcd"]} />
-                    <Text fontSize={3} color="#555">
-                        hello
+                    <Text ref={textRef} fontSize={1} color="#555">
+                    Hello{"\n"}World
                     </Text>
                 </RenderTexture>
             </meshStandardMaterial>
         </mesh>
-    )
-}
+    );
+};
 
-export default Cube
+export default Cube;
