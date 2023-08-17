@@ -2,9 +2,10 @@
 @use './partials/hero';
 @use './partials/who';
 @use './partials/works';
-@use './partials/nav';
+
 
 .test-container {
     width: 100vw;
     height: 100vh;
+    background-color: purple;
 }

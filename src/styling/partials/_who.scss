@@ -4,30 +4,35 @@
 
 
 .who-container {
-    @include flex(center, center);
+    height: 100vh;
+    scroll-snap-align: center;
+    @include flex(center);
+
 }
 
 .who{
-    @include flex(center, center);
-    width: 80vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    width: 1400px;
+    @include flex(space-between, center);
 
     &__left{
-        width: 20rem;
-
-        animation: animate 2s infinite ease-in-out alternate;
-        
-
-        @keyframes animate{
-            to{
-                transform: translateY(20px);
-            }
+        flex: 1;
+        @media only screen and (max-width: 768px) {
+          display: none;
         }
     }
 
 
     &__right{
+        flex: 1;
+        @include flex(center, normal, 1.2rem, column);
 
-        @include flex(flex-start, flex-start, 1rem, column);
+      
+        @media only screen and (max-width: 768px) {
+          align-items: center;
+          text-align: center;
+        }
 
         &__h1{
             font-size: 2rem;
