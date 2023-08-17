@@ -5,6 +5,7 @@ import Map from "./Map";
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  
 `;
 
 const Container = styled.div`
@@ -13,6 +14,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  background-color: lightgray;
 `;
 
 const Left = styled.div`

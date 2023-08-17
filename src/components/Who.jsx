@@ -9,6 +9,7 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+  background-color: lightblue;
 `;
 
 const Container = styled.div`
