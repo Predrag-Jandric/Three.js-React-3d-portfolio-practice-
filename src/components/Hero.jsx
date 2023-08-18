@@ -1,43 +1,18 @@
-// import React from 'react'
-// import Navbar from './Navbar'
-// import heroimg from '../assets/race.png'
-
-// function Hero() {
-//   return (
-//     <main className='hero-container component-container'>
-//       <Navbar/>
-
-//       <section className='hero'>
-//         <article className='hero__left'>
-//           <h1 className='hero__left__h1'>Think. Make. Solve.</h1>
-//           <p className='hero__left__p'>-- what we do</p>
-//           <p className='hero__left__desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquam quae a laboriosam error. Atque, non laborum?</p>
-//           <button className='hero__left__btn'>learn more</button>
-//         </article>
-        
-
-//         <img className='hero__right' src={heroimg} alt="" />
-//       </section>
-//     </main>
-//   )
-// }
-
-// export default Hero
-
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import heroImg from "../assets/heroImg.svg"
+import { colors } from "./theme"
 
 const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: gray;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 
   @media only screen and (max-width: 768px) {
     height: 200vh;
@@ -46,29 +21,32 @@ const Section = styled.div`
 
 const Container = styled.div`
   height: 100%;
-  scroll-snap-align: center;
-  width: 1400px;
+  /* width: 87.5rem; */
+  width: 85vw;
   display: flex;
   justify-content: space-between;
 
   @media only screen and (max-width: 768px) {
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 `;
 
 const Left = styled.div`
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  order: 1;
 
   @media only screen and (max-width: 768px) {
-    flex: 1;
+    order: 2;
     align-items: center;
+    flex: 0;
+    
   }
 `;
 
@@ -86,10 +64,6 @@ const WhatWeDo = styled.div`
   gap: 10px;
 `;
 
-const Line = styled.img`
-  height: 5px;
-`;
-
 const Subtitle = styled.h2`
   color: #da4ea2;
 `;
@@ -104,29 +78,38 @@ const Desc = styled.p`
 `;
 
 const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
-  font-weight: 500;
+  padding: 10px 20px;
   width: 10rem;
-  padding: 10px;
+  background-color: ${colors.primary};
+  color: ${colors.grayscale900};
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
+  transition: 100ms ease-in;
+
+  &:hover{
+    background-color: ${colors.primaryHover};
+  }
 `;
 
 const Right = styled.div`
-  flex: 3;
   position: relative;
+  width: 50%;
+  order: 2;
   @media only screen and (max-width: 768px) {
-    flex: 1;
     width: 100%;
+    height: 70vh;
+    order: 1;
+    
   }
 `;
 
 const Img = styled.img`
-  width: 800px;
-  height: 600px;
-  object-fit: contain;
+  width: 35rem;
+  /* height: 600px; */
+  /* object-fit: contain; */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -135,9 +118,8 @@ const Img = styled.img`
   margin: auto;
   animation: animate 2s infinite ease alternate;
 
-  @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+  @media only screen and (max-width: 1400px) {
+    width: 90%;
   }
 
   @keyframes animate {
@@ -148,6 +130,34 @@ const Img = styled.img`
 `;
 
 const Hero = () => {
+
+  const [sphereScale, setSphereScale] = useState(2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Adjust the scale based on the window width
+      if (window.innerWidth < 1400) {
+        setSphereScale(1.7);
+        if (window.innerWidth < 1150) {
+          setSphereScale(1.2);
+        }
+      } else {
+        setSphereScale(2); // Set the original scale for larger screens
+      }
+    };
+
+    // Initial call to adjust scale on component mount
+    handleResize();
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Section>
       <Navbar />
@@ -155,8 +165,7 @@ const Hero = () => {
         <Left>
           <Title>Think. Make. Solve.</Title>
           <WhatWeDo>
-            <Line src="./img/line.png" />
-            <Subtitle>What we Do</Subtitle>
+            <Subtitle>• What we Do</Subtitle>
           </WhatWeDo>
           <Desc>
             we enjoy creating delightful, human-centered digital experiences.
@@ -169,7 +178,7 @@ const Hero = () => {
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
               <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={2.4}>
+              <Sphere args={[1, 100, 200]} scale={sphereScale}>
                 <MeshDistortMaterial
                   color="#3d1c56"
                   attach="material"
@@ -179,7 +188,7 @@ const Hero = () => {
               </Sphere>
             </Suspense>
           </Canvas>
-          <Img src="./img/moon.png" />
+          <Img src={heroImg} />
         </Right>
       </Container>
     </Section>

@@ -1,19 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import search from "../assets/search.svg";
 import logo from "../assets/logoipsum.svg";
+import { colors } from "./theme"; 
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
+  padding: 0 1rem;
+  height: 10vh;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
   }
 `;
 
 const Container = styled.div`
-  width: 1400px;
+  width: 85vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,26 +49,28 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   cursor: pointer;
-`;
-
-const Icons = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-`;
-
-const Icon = styled.img`
-  width: 20px;
-  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 100ms ease-in;
+  
+  &:hover {
+    color: ${colors.primary};
+  }
 `;
 
 const Button = styled.button`
   padding: 10px 20px;
-  background-color: #da4ea2;
-  color: white;
+  background-color: ${colors.primary};
+  color: ${colors.grayscale900};
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
+  transition: 100ms ease-in;
+
+  &:hover{
+    background-color: ${colors.primaryHover};
+  }
 `;
 
 const Navbar = () => {
@@ -82,11 +86,7 @@ const Navbar = () => {
             <ListItem>Contact</ListItem>
           </List>
         </Links>
-        <Icons>
-          {/* Changed the image due to copyright problems */}
-          <Icon src={search} />
           <Button>Hire Now</Button>
-        </Icons>
       </Container>
     </Section>
   );

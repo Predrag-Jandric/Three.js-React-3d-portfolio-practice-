@@ -9,7 +9,7 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
-  background-color: lightblue;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 `;
 
 const Container = styled.div`
