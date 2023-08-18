@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import styled from "styled-components";
-import Navbar from "./Navbar";
+import Navbar from "./Hero_helper_components/Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import heroImg from "../assets/heroImg.svg"
@@ -27,7 +27,7 @@ const Container = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: 1400px) {
-    width: 90%;
+    width: 95%;
   }
 `;
 
@@ -53,6 +53,10 @@ const Title = styled.h1`
   font-size: 3.7rem;
 `;
 
+const TitleSpan = styled.span`
+  color: ${colors.react};
+`
+
 const WhatWeDo = styled.div`
   display: flex;
   align-items: center;
@@ -63,15 +67,17 @@ const WhatWeDo = styled.div`
 const Subtitle = styled.h2`
   color: ${colors.secondary};
   font-size: 1.3rem;
+  font-weight: 400;
 `;
 
 const Desc = styled.p`
   font-size: 1.1rem;
   color: lightgray;
+  line-height: 1.5;
 `;
 
 const Button = styled.button`
-padding: 10px 20px;
+  padding: 10px 20px;
   width: 10rem;
   background-color: ${colors.primary};
   color: ${colors.grayscale900};
@@ -150,12 +156,12 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
+          <Title>Welcome to my <TitleSpan>React</TitleSpan> portfolio</Title>
           <WhatWeDo>
-            <Subtitle>• What we Do</Subtitle>
+            <Subtitle>...where creativity meets functionality.</Subtitle>
           </WhatWeDo>
           <Desc>
-            we enjoy creating delightful, human-centered digital experiences.
+            Explore my work, immerse yourself in the world of React, and witness the fusion of innovation and aesthetics that defines my journey in the realm of development.
           </Desc>
           <Button>Learn More</Button>
         </Left>
@@ -167,9 +173,9 @@ const Hero = () => {
               <directionalLight position={[3, 2, 1]} />
               <Sphere args={[1, 100, 200]} scale={sphereScale}>
                 <MeshDistortMaterial
-                  color="#3d1c56"
+                  color="#61dbfb"
                   attach="material"
-                  distort={0.5}
+                  distort={0.4}
                   speed={2}
                 />
               </Sphere>

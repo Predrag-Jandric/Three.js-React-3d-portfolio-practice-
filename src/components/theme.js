@@ -4,6 +4,8 @@ export const colors = {
     secondary: "red", 
     // 1effbc
 
+    react: "#61dbfb",
+
     // shades of white and black
     grayscale50: "#fff",
     grayscale100: "rgb(245 245 245);",

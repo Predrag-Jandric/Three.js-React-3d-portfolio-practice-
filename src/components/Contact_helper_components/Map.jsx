@@ -5,6 +5,10 @@ import {
   Geography,
 } from "react-simple-maps";
 
+// features.json in the same folder is related
+// to this MAP.jsx. it uses https://www.react-simple-maps.io/
+
+
 const Map = () => {
   return (
     <ComposableMap

@@ -2,26 +2,28 @@ import React, { Suspense } from "react";
 import styled from "styled-components";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Cube from "./Cube";
+import Cube from "./Intro_helper_components/Cube";
 import { colors } from "./theme"
 
 const Section = styled.div`
-  height: 80vh;
+  /* height: 80vh; */
   align-items: center;
   display: flex;
   justify-content: center;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  /* border: 3px solid yellow; */
 `;
 
 const Container = styled.div`
-  width: 75rem;
+  width: 1350px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  /* border: 1px solid yellow; */
 
   @media only screen and (max-width: 1024px) {
-    width: 90%;
+    width: 95%;
     flex-direction: column;
     align-items: center;
   
@@ -50,6 +52,10 @@ const Title = styled.h1`
   font-size: 3.7rem;
 `;
 
+const TitleSpan = styled.span`
+  color: ${colors.react};
+`
+
 const Right = styled.div`
   width: 50%;
   display: flex;
@@ -74,11 +80,13 @@ const WhatWeDo = styled.div`
 const Subtitle = styled.h2`
   color: ${colors.secondary};
   font-size: 1.3rem;
+  font-weight: 400;
 `;
 
 const Desc = styled.p`
   font-size: 1.1rem;
   color: ${colors.grayscale300};
+  line-height: 1.5;
 `;
 
 const Button = styled.button`
@@ -98,7 +106,7 @@ const Button = styled.button`
   }
 `;
 
-const Who = () => {
+const Into = () => {
 
   const cubeScale = [4, 4, 4];
 
@@ -116,19 +124,18 @@ const Who = () => {
           </Canvas>
         </Left>
         <Right>
-          <Title>Think outside the square space</Title>
+          <Title>Think outside the box with <TitleSpan>React</TitleSpan></Title>
           <WhatWeDo>
-            <Subtitle>• Who we Are</Subtitle>
+            <Subtitle>...and break free from conventional boundaries </Subtitle>
           </WhatWeDo>
           <Desc>
-            a creative group of designers and developers with a passion for the
-            arts.
+          React isn't just a library; it's the most modern tool for crafting pages that were once deemed impossible. With its dynamic components and reactivity, React empowers developers to bring life amazing websites.
           </Desc>
-          <Button>See our works</Button>
+          {/* <Button>See our works</Button> */}
         </Right>
       </Container>
     </Section>
   );
 };
 
-export default Who;
+export default Into;

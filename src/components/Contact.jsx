@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Map from "./Map";
+import Map from "./Contact_helper_components/Map";
+import { colors } from "./theme"
 
 const Section = styled.div`
   height: 100vh;
@@ -14,7 +15,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  background-color: lightgray;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 `;
 
 const Left = styled.div`
@@ -22,7 +23,7 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     justify-content: center;
   }
 `;
@@ -32,38 +33,54 @@ const Title = styled.h1`
 `;
 
 const Form = styled.form`
-  width: 500px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   gap: 25px;
 
+  @media only screen and (max-width: 1024px) {
+    width: 80%;
+  }
+
   @media only screen and (max-width: 768px) {
-    width: 300px;
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    width: 90%;
   }
 `;
 
 const Input = styled.input`
-  padding: 20px;
-  background-color: #e8e6e6;
+  padding: 1rem;
   border: none;
   border-radius: 5px;
+  background-color: ${colors.grayscale100};
+  font-size: 1rem;
 `;
 
 const TextArea = styled.textarea`
-  padding: 20px;
+  padding: 1rem;
   border: none;
   border-radius: 5px;
-  background-color: #e8e6e6;
+  background-color: ${colors.grayscale100};
 `;
 
 const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
+  padding: 10px 20px;
+  width: 10rem;
+  background-color: ${colors.primary};
+  color: ${colors.grayscale900};
   border: none;
-  font-weight: bold;
-  cursor: pointer;
   border-radius: 5px;
-  padding: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 100ms ease-in;
+
+  &:hover {
+    background-color: ${colors.primaryHover};
+  }
 `;
 
 const Right = styled.div`
@@ -89,8 +106,8 @@ const Contact = () => {
               name="message"
               rows={10}
             />
-            <Button onClick={(e) => {e.preventDefault(); alert("FORM NOT OPERATIONAL")}} type="submit">Send</Button>
-          
+            <Button onClick={(e) => { e.preventDefault(); alert("FORM NOT OPERATIONAL") }} type="submit">Send</Button>
+
           </Form>
         </Left>
         <Right>

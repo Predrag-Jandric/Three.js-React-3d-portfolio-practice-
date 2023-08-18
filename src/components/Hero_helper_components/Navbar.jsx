@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logoipsum.svg";
-import { colors } from "./theme"; 
+import logo from "../../assets/logoipsum.svg";
+import { colors } from "../theme";
 
 const Section = styled.div`
   display: flex;
@@ -80,13 +80,12 @@ const Navbar = () => {
         <Links>
           <Logo src={logo} />
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Studio</ListItem>
-            <ListItem>Works</ListItem>
-            <ListItem>Contact</ListItem>
+            <ListItem>link1</ListItem>
+            <ListItem>link2</ListItem>
+            <ListItem>link3</ListItem>
           </List>
         </Links>
-          <Button>Hire Now</Button>
+        <Button>Hire Now</Button>
       </Container>
     </Section>
   );
