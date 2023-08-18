@@ -6,7 +6,7 @@ import { colors } from "./theme";
 const Section = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0 1rem;
+  padding: 1rem;
   height: 10vh;
 
   @media only screen and (max-width: 1024px) {
@@ -21,7 +21,7 @@ const Container = styled.div`
   align-items: center;
   padding: 10px 0px;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     padding: 10px;
   }
@@ -42,14 +42,14 @@ const List = styled.ul`
   gap: 20px;
   list-style: none;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     display: none;
   }
 `;
 
 const ListItem = styled.li`
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: 100ms ease-in;
   
   &:hover {
@@ -63,7 +63,7 @@ const Button = styled.button`
   color: ${colors.grayscale900};
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   transition: 100ms ease-in;

@@ -17,9 +17,9 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <Hero />
-      <Who />
-      {/* <Works /> */}
+      {/* <Hero />
+      <Who /> */}
+      <Works />
       {/* <Contact /> */}
     </Container>
   );

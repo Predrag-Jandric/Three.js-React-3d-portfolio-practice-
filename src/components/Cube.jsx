@@ -2,14 +2,14 @@ import React, { useRef } from "react";
 import { PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-const Cube = () => {
+const Cube = ({scale}) => {
     const textRef = useRef();
     useFrame(
         (state) =>
-            (textRef.current.position.x = Math.sin(state.clock.elapsedTime) / 2)
+            (textRef.current.position.x = Math.sin(state.clock.elapsedTime) * 2)
     );
     return (
-        <mesh>
+        <mesh scale={scale} >
             <boxGeometry />
             <meshStandardMaterial>
                 <RenderTexture attach="map">

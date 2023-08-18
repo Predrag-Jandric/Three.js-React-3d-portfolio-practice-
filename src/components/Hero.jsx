@@ -7,55 +7,50 @@ import heroImg from "../assets/heroImg.svg"
 import { colors } from "./theme"
 
 const Section = styled.div`
-  height: 90vh;
+  height: 100vh;
+  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 
-  @media only screen and (max-width: 768px) {
-    height: 200vh;
+  @media only screen and (max-width: 1024px) {
+    height: 60vh;
   }
 `;
 
 const Container = styled.div`
-  height: 100%;
-  /* width: 87.5rem; */
-  width: 85vw;
+  height: 90%;
+  width: 1350px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1400px) {
     width: 90%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
   }
 `;
 
 const Left = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  order: 1;
 
-  @media only screen and (max-width: 768px) {
-    order: 2;
+  @media only screen and (max-width: 1400px) {
+    flex: 4;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1024px) {
     align-items: center;
-    flex: 0;
-    
+    text-align: center;
   }
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
-
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-  }
+  font-size: 3.7rem;
 `;
 
 const WhatWeDo = styled.div`
@@ -64,27 +59,25 @@ const WhatWeDo = styled.div`
   gap: 10px;
 `;
 
+
 const Subtitle = styled.h2`
-  color: #da4ea2;
+  color: ${colors.secondary};
+  font-size: 1.3rem;
 `;
 
 const Desc = styled.p`
-  font-size: 24px;
+  font-size: 1.1rem;
   color: lightgray;
-  @media only screen and (max-width: 768px) {
-    padding: 20px;
-    text-align: center;
-  }
 `;
 
 const Button = styled.button`
-  padding: 10px 20px;
+padding: 10px 20px;
   width: 10rem;
   background-color: ${colors.primary};
   color: ${colors.grayscale900};
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   transition: 100ms ease-in;
@@ -95,21 +88,22 @@ const Button = styled.button`
 `;
 
 const Right = styled.div`
+  flex: 3;
   position: relative;
-  width: 50%;
-  order: 2;
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-    height: 70vh;
-    order: 1;
-    
+
+  @media only screen and (max-width: 1400px){
+    width: 20rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    display: none;
   }
 `;
 
 const Img = styled.img`
-  width: 35rem;
-  /* height: 600px; */
-  /* object-fit: contain; */
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -118,31 +112,24 @@ const Img = styled.img`
   margin: auto;
   animation: animate 2s infinite ease alternate;
 
-  @media only screen and (max-width: 1400px) {
-    width: 90%;
-  }
-
   @keyframes animate {
     to {
-      transform: translateY(20px);
+      transform: translateY(1.2rem);
     }
   }
 `;
 
 const Hero = () => {
 
-  const [sphereScale, setSphereScale] = useState(2);
+  const [sphereScale, setSphereScale] = useState(1.4);
 
   useEffect(() => {
     const handleResize = () => {
       // Adjust the scale based on the window width
       if (window.innerWidth < 1400) {
-        setSphereScale(1.7);
-        if (window.innerWidth < 1150) {
-          setSphereScale(1.2);
-        }
+        setSphereScale(1);
       } else {
-        setSphereScale(2); // Set the original scale for larger screens
+        setSphereScale(1.4); // Set the original scale for larger screens
       }
     };
 
