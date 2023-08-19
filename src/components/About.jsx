@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AboutDesc from "./about_helper_components/AboutDesc";
 import SkillsDesc from "./about_helper_components/SkillsDesc";
 import ProjectsDesc from "./about_helper_components/ProjectsDesc";
+import { colors } from "../components/theme"
 
 
 const Section = styled.div`
@@ -39,6 +40,8 @@ const Left = styled.div`
 
   @media only screen and (max-width: 1024px) {
     justify-content: center;
+    text-align: center;
+    width: 90%;
   }
 `;
 
@@ -56,13 +59,11 @@ const ListItem = styled.li`
   padding: 1rem;
   cursor: pointer;
   transition: 100ms ease-in;
-  border: 1px solid white;
-
-
+  color: ${colors.grayscale100};
 
   &:hover {
-    margin-left: 1.5rem;
-    color: white;
+    margin-left: 2rem;
+    color: ${colors.react};;
   }
 `;
 

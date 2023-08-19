@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import styled from "styled-components";
-import Navbar from "./Hero_helper_components/Navbar";
+import Navbar from "./hero_helper_components/Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import heroImg from "../assets/heroImg.svg"
@@ -153,7 +153,7 @@ const Hero = () => {
 
   return (
     <Section>
-      <Navbar />
+      {/* <Navbar /> */}
       <Container>
         <Left>
           <Title>Welcome to my <TitleSpan>React</TitleSpan> portfolio</Title>

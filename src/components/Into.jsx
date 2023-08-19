@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import styled from "styled-components";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Cube from "./Intro_helper_components/Cube";
+import Cube from "./intro_helper_components/Cube";
 import { colors } from "./theme"
 
 const Section = styled.div`
