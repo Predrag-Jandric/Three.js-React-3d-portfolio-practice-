@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
-import Into from "./components/Into";
+import Intro from "./components/Intro";
 import About from "./components/About";
 
 const Container = styled.div`
@@ -18,7 +18,7 @@ function App() {
   return (
     <Container>
       <Hero />
-      <Into />
+      <Intro />
       <About />
       <Contact />
     </Container>

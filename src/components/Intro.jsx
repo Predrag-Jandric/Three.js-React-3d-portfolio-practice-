@@ -89,24 +89,24 @@ const Desc = styled.p`
   line-height: 1.5;
 `;
 
-const Button = styled.button`
-  padding: 10px 20px;
-  width: 10rem;
-  background-color: ${colors.primary};
-  color: ${colors.grayscale900};
-  border: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 100ms ease-in;
+// const Button = styled.button`
+//   padding: 10px 20px;
+//   width: 10rem;
+//   background-color: ${colors.primary};
+//   color: ${colors.grayscale900};
+//   border: none;
+//   border-radius: 5px;
+//   font-size: 0.9rem;
+//   font-weight: 500;
+//   cursor: pointer;
+//   transition: 100ms ease-in;
 
-  &:hover{
-    background-color: ${colors.primaryHover};
-  }
-`;
+//   &:hover{
+//     background-color: ${colors.primaryHover};
+//   }
+// `;
 
-const Into = () => {
+const Intro = () => {
 
   const cubeScale = [4, 4, 4];
 
@@ -129,7 +129,7 @@ const Into = () => {
             <Subtitle>...and break free from conventional boundaries </Subtitle>
           </WhatWeDo>
           <Desc>
-          React isn't just a library; it's the most modern tool for crafting pages that were once deemed impossible. With its dynamic components and reactivity, React empowers developers to bring life amazing websites.
+            React isn't just a library; it's the most modern tool for crafting pages that were once deemed impossible. With its dynamic components and reactivity, React empowers developers to bring life amazing websites.
           </Desc>
           {/* <Button>See our works</Button> */}
         </Right>
@@ -138,4 +138,4 @@ const Into = () => {
   );
 };
 
-export default Into;
+export default Intro;
