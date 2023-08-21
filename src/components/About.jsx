@@ -17,7 +17,7 @@ const Section = styled.div`
   font-weight: 300;
   padding: 5rem 0;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-  /* border: 3px solid white; */
+  /* border: 1px solid white; */
 `;
 
 const Container = styled.div`
@@ -27,8 +27,13 @@ const Container = styled.div`
   align-items: center;
   /* border: 1px solid white; */
 
+  @media only screen and (max-width: 1400px) {
+    width: 92%;
+  }
+
   @media only screen and (max-width: 1024px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -36,12 +41,13 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 
   @media only screen and (max-width: 1024px) {
     justify-content: center;
     text-align: center;
-    width: 90%;
+    /* width: 90%; */
+    /* border: 1px solid green; */
   }
 `;
 
@@ -49,8 +55,10 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
-  padding: 1rem;
+  /* gap: 5px; */
+  /* padding: 1rem; */
+    /* border: 1px solid green; */
+
 `;
 
 const ListItem = styled.li`
@@ -62,8 +70,9 @@ const ListItem = styled.li`
   color: ${colors.grayscale100};
 
   &:hover {
-    margin-left: 2rem;
-    color: ${colors.react};;
+    /* margin-left: 2rem; */
+    color: ${colors.react};
+    transform: translateX(20px) 
   }
 `;
 

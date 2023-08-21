@@ -6,6 +6,10 @@ import { colors } from "./theme"
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  @media only screen and (max-width: 768px) {
+    /* justify-content: center; */
+    height: max-content;
+  }
   
 `;
 
@@ -16,13 +20,21 @@ const Container = styled.div`
   justify-content: space-between;
   gap: 50px;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
+  @media only screen and (max-width: 768px) {
+    padding: 1rem 0 4rem 0;
+
+  }
 `;
+
+
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
   @media only screen and (max-width: 1024px) {
     justify-content: center;
   }

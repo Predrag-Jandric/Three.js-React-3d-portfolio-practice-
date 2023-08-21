@@ -1,6 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
 import styled from "styled-components";
-import Navbar from "./hero_helper_components/Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import heroImg from "../assets/heroImg.svg"
@@ -14,9 +13,12 @@ const Section = styled.div`
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  /* border: 1px solid white; */
+
 
   @media only screen and (max-width: 1024px) {
-    height: 60vh;
+    height: max-content;
+    /* padding: 2rem 0; */
   }
 `;
 
@@ -27,7 +29,10 @@ const Container = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: 1400px) {
-    width: 95%;
+    width: 90%;
+    height: max-content;
+    /* border: 1px solid red; */
+    padding: 6rem 0 3rem 0;
   }
 `;
 
@@ -46,6 +51,7 @@ const Left = styled.div`
   @media only screen and (max-width: 1024px) {
     align-items: center;
     text-align: center;
+    height: max-content;
   }
 `;
 
@@ -72,7 +78,7 @@ const Subtitle = styled.h2`
 
 const Desc = styled.p`
   font-size: 1.1rem;
-  color: lightgray;
+  color: ${colors.grayscale200};
   line-height: 1.5;
 `;
 
@@ -127,15 +133,15 @@ const Img = styled.img`
 
 const Hero = () => {
 
-  const [sphereScale, setSphereScale] = useState(1.4);
+  const [sphereScale, setSphereScale] = useState(1.6);
 
   useEffect(() => {
     const handleResize = () => {
       // Adjust the scale based on the window width
       if (window.innerWidth < 1400) {
-        setSphereScale(1);
+        setSphereScale(1.3);
       } else {
-        setSphereScale(1.4); // Set the original scale for larger screens
+        setSphereScale(1.6); // Set the original scale for larger screens
       }
     };
 
@@ -153,7 +159,6 @@ const Hero = () => {
 
   return (
     <Section>
-      {/* <Navbar /> */}
       <Container>
         <Left>
           <Title>Welcome to my <TitleSpan>React</TitleSpan> portfolio</Title>
@@ -169,13 +174,13 @@ const Hero = () => {
           <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
-              <ambientLight intensity={1} />
+              <ambientLight intensity={1.5} />
               <directionalLight position={[3, 2, 1]} />
               <Sphere args={[1, 100, 200]} scale={sphereScale}>
                 <MeshDistortMaterial
-                  color="#61dbfb"
+                  color="#6a11cb"
                   attach="material"
-                  distort={0.4}
+                  distort={0.5}
                   speed={2}
                 />
               </Sphere>

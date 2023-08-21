@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colors } from "../theme"
 
 const Container = styled.div`
-  border: 1px solid white;
+  border: 1px solid gray;
   color: ${colors.grayscale100};
 `
 const Title = styled.h2`
@@ -18,7 +18,7 @@ const Desc = styled.p`
 function AboutDesc() {
   return (
     <Container>
-      <Title>About Component</Title>
+      <Title>Custom Component here</Title>
       <Desc>Here, a custom layout can be made that will present more information about the owner of this portfolio, like the jouney it took, difficulties, an image of a programmer etc.</Desc>
     </Container>
   )

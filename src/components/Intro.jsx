@@ -11,7 +11,7 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-  /* border: 3px solid yellow; */
+  /* border: 1px solid yellow; */
 `;
 
 const Container = styled.div`
@@ -22,11 +22,11 @@ const Container = styled.div`
   gap: 2rem;
   /* border: 1px solid yellow; */
 
+
   @media only screen and (max-width: 1024px) {
-    width: 95%;
+    width: 90%;
     flex-direction: column;
     align-items: center;
-  
   }
 `;
 
@@ -37,6 +37,8 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  /* border: 1px solid yellow; */
+
 
   &:hover {
     cursor: all-scroll;
@@ -62,7 +64,9 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding: 1rem;
+  padding: 1.5rem;
+  /* border: 1px solid yellow; */
+
 
   @media only screen and (max-width: 1024px) {
     text-align: center;
@@ -85,7 +89,7 @@ const Subtitle = styled.h2`
 
 const Desc = styled.p`
   font-size: 1.1rem;
-  color: ${colors.grayscale300};
+  color: ${colors.grayscale200};
   line-height: 1.5;
 `;
 

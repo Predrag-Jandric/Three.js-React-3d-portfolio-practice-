@@ -1,9 +1,7 @@
 export const colors = {
     primary: "#fbb13c",
-    primaryHover: "#1effbc",
-    secondary: "red", 
-    // 1effbc
-
+    primaryHover: "#f09605",
+    secondary: "#88e5fc", 
     react: "#61dbfb",
 
     // shades of white and black
