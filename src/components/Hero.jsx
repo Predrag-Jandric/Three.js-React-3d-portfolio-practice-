@@ -16,19 +16,18 @@ const Section = styled.div`
   /* border: 1px solid white; */
 
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     height: max-content;
-    /* padding: 2rem 0; */
   }
 `;
 
 const Container = styled.div`
   height: 90%;
-  width: 1350px;
+  width: 84.375rem;
   display: flex;
   justify-content: center;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 87.5rem) {
     width: 90%;
     height: max-content;
     /* border: 1px solid red; */
@@ -43,12 +42,12 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 87.5rem) {
     flex: 4;
     width: 100%;
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     align-items: center;
     text-align: center;
     height: max-content;
@@ -103,18 +102,18 @@ const Right = styled.div`
   flex: 3;
   position: relative;
 
-  @media only screen and (max-width: 1400px){
+  @media only screen and (max-width: 87.5rem){
     width: 20rem;
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     display: none;
   }
 `;
 
 const Img = styled.img`
   width: 100%;
-  height: 600px;
+  height: 37.5rem;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -151,10 +150,6 @@ const Hero = () => {
     // Attach the event listener
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   return (

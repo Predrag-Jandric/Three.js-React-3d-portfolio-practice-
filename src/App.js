@@ -6,7 +6,7 @@ import About from "./components/About";
 
 const Container = styled.div`
   height: 100vh;
-  color: white;
+  color: rgb(245 245 245);
 `;
 
 function App() {

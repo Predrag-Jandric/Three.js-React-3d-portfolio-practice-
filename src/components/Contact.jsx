@@ -5,12 +5,10 @@ import { colors } from "./theme"
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
-  @media only screen and (max-width: 768px) {
-    /* justify-content: center; */
+
+  @media only screen and (max-width: 48rem) {
     height: max-content;
   }
-  
 `;
 
 const Container = styled.div`
@@ -18,10 +16,10 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 3.1rem;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 48rem) {
     padding: 1rem 0 4rem 0;
 
   }
@@ -35,7 +33,7 @@ const Left = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     justify-content: center;
   }
 `;
@@ -45,20 +43,20 @@ const Title = styled.h1`
 `;
 
 const Form = styled.form`
-  width: 450px;
+  width: 28rem;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 1.5rem;
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     width: 80%;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 48rem) {
     width: 400px;
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 30rem) {
     width: 90%;
   }
 `;
@@ -98,7 +96,7 @@ const Button = styled.button`
 const Right = styled.div`
   flex: 1;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 48rem) {
     display: none;
   }
 `;

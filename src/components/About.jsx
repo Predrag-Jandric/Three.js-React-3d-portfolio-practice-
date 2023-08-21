@@ -13,7 +13,6 @@ const Section = styled.div`
   justify-content: center;
   position: relative;
   color: black;
-  font-size: 14px;
   font-weight: 300;
   padding: 5rem 0;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
@@ -21,17 +20,17 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  width: 1350px;
+  width: 84.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
   /* border: 1px solid white; */
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 87.5rem) {
     width: 92%;
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     flex-direction: column;
     align-items: center;
   }
@@ -43,10 +42,9 @@ const Left = styled.div`
   align-items: center;
   /* border: 1px solid green; */
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     justify-content: center;
     text-align: center;
-    /* width: 90%; */
     /* border: 1px solid green; */
   }
 `;
@@ -55,10 +53,7 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  /* gap: 5px; */
-  /* padding: 1rem; */
-    /* border: 1px solid green; */
-
+  /* border: 1px solid green; */
 `;
 
 const ListItem = styled.li`
@@ -70,9 +65,8 @@ const ListItem = styled.li`
   color: ${colors.grayscale100};
 
   &:hover {
-    /* margin-left: 2rem; */
     color: ${colors.react};
-    transform: translateX(20px) 
+    transform: translateX(1.2rem) 
   }
 `;
 

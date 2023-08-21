@@ -6,7 +6,6 @@ import Cube from "./Cube";
 import { colors } from "./theme"
 
 const Section = styled.div`
-  /* height: 80vh; */
   align-items: center;
   display: flex;
   justify-content: center;
@@ -15,7 +14,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  width: 1350px;
+  width: 84.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +22,7 @@ const Container = styled.div`
   /* border: 1px solid yellow; */
 
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     width: 90%;
     flex-direction: column;
     align-items: center;
@@ -44,7 +43,7 @@ const Left = styled.div`
     cursor: all-scroll;
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     width: 90%;
     height: 20rem;
   }
@@ -68,7 +67,7 @@ const Right = styled.div`
   /* border: 1px solid yellow; */
 
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     text-align: center;
     align-items: center;
     width: 100%;

@@ -1,9 +1,12 @@
 # 🛠 Three.js & React - customizable portfolio
 
-<!-- # 🔗 [Live Preview](link here) -->
-<!-- ![Design preview](preview file here) -->
+# 🔗 [Live Preview]()
+![Design preview](./previewPart1.gif)
+![Design preview](./previewPart2.gif)
+![Design preview](./previewPart3.gif)
+![Design preview](./previewPart4.png)
 
-## Welcome! 👋
+# Welcome! 👋
 
 - I made a customizable Portfolio example using 3D objects from Three.js and React as a basis. The exercise here was to get introduced to Three.js and how 3D objects can be integrated into a project. This project was originally made here ("https://youtu.be/qALsVa-V9qo") but in order to add a personal touch and not just copy everything I modified it according to my opinion both in code and design. it features:
 
