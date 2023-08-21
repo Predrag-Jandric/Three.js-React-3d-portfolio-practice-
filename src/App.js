@@ -6,12 +6,7 @@ import About from "./components/About";
 
 const Container = styled.div`
   height: 100vh;
-  /* overflow-y: auto; */
   color: white;
-  background: url("./img/bg.jpeg");
-  &::-webkit-scrollbar{
-    display: none;
-  }
 `;
 
 function App() {

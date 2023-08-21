@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Map from "./contact_helper_components/Map";
+import Map from "./Map";
 import { colors } from "./theme"
 
 const Section = styled.div`
